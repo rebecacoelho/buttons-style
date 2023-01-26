@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <title>Butões e Cursores</title>
+</head>
+<body>
+
+<div class="body">
+  <div class="container">
+    <div class="title top">
+      <h1>Tipos de butões</h1>
+      <p>Dentro de um layout, butões servem para destacar ações importante a serem tomadas.</p>
+      <p>Acompanhe abaixo um exemplo de tipos e propriedades.</p>
+    </div>
+
+    <div class="buttons-cols">
+      <div class="buttons-primary">
+        <button class="primary" disabled>DISABLED</button>
+        <button class="primary">Default Primary</button>
+        <button class="primary loading">
+          <i class="ph-circle-notch"></i>
+          Loading Primary
+        </button>
+
+        <button class="primary movable">
+          <i class="ph-list"></i>
+          Movable Primary
+        </button>
+      </div>
+
+      <div class="buttons-secondary">
+        <button class="secondary" disabled>DISABLED</button>
+        <button class="secondary">Default Secondary</button>
+        <button class="secondary loading">
+          <i class="ph-circle-notch"></i>
+          Loading Secondary
+        </button>
+
+        <button class="secondary movable">
+          <i class="ph-list"></i>
+          Movable Secondary
+        </button>
+      </div>
+
+      <div class="buttons-terciary">
+        <button class="terciary" disabled>DISABLED</button>
+        <button class="terciary">Default Terciary</button>
+        <button class="terciary loading">
+          <i class="ph-circle-notch"></i>
+          Loading Terciary
+        </button>
+
+        <button class="terciary movable">
+          <i class="ph-list"></i>
+          Movable Terciary
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="darkest">
+    <div class="title">
+      <h1>Teste os butões</h1>
+      <p>Intereja com os butões e observe a mudança de aparência e de cursores</p>
+    </div>
+
+    <button class="primary" onclick="loading(event)">Interaja Comigo</button>
+    <button class="secondary">Interaja Comigo</button>
+    <button class="terciary movable">
+      <i class="ph-list"></i>
+      Interaja Comigo
+    </button>
+  </div>
+</div>
+
+  <script>
+    function loading(event) {
+      const button = event.currentTarget
+      button.classList.add('loading')
+      const text = button.textContent
+      button.innerHTML = `
+      <i class="ph-circle-notch"></i>
+      ${text}
+      `
+    }
+  </script>
+</body>
+</html>
